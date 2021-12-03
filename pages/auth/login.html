@@ -19,15 +19,20 @@
             fugiat modi optio.
           </p>
         </div>
-        <div class="form">
+        <form class="form" id="form-login">
           <input type="text" placeholder="Email" />
           <input type="password" placeholder="Password" />
           <button class="btn">Login</button>
-          <button class="btn-gray">Don't have account, Register now</button>
-        </div>
+        </form>
+        <button class="btn-gray">Don't have account, Register now</button>
       </section>
     </main>
 
     <script src="../../assets/js/utils.js"></script>
+    <script src="../../assets/js/auth.js"></script>
+
+    <script>
+      formLogin.addEventListener('submit', login);
+    </script>
   </body>
 </html>

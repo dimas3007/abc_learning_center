@@ -9,7 +9,7 @@
   </head>
   <body>
     <main class="container">
-      <html-include src="../../components/header.html"></html-include>
+      <!-- <html-include src="../../components/header.html"></html-include> -->
 
       <section class="auth">
         <div class="text">
@@ -19,16 +19,21 @@
             fugiat modi optio.
           </p>
         </div>
-        <div class="form">
-          <input type="text" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <input type="password" placeholder="Repeat Password" />
+        <form class="form" id="form-signup">
+          <input name="email" type="text" placeholder="Email" />
+          <input name="password" type="password" placeholder="Password" />
+          <input name="repeat" type="password" placeholder="Repeat Password" />
           <button class="btn">Register</button>
-          <button class="btn-gray">Login</button>
-        </div>
+        </form>
+        <button class="btn-gray">Login</button>
       </section>
     </main>
 
     <script src="../../assets/js/utils.js"></script>
+    <script src="../../assets/js/auth.js"></script>
+
+    <script>
+      formRegister.addEventListener('submit', register);
+    </script>
   </body>
 </html>
