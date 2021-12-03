@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+$header-height: 3.5rem;
+
+// $gray-color: rgb(71, 71, 71);
+$gray-color: #a0a0a2;
+$soft-gray-color: #dbdbdb;
+$primary-color: rgb(73, 88, 232);
+$primary-dark-color: #2734aa;
+$dark-color: rgb(32, 32, 32);
+$light-color: rgb(245, 245, 255);
+$white-color: rgb(255, 255, 255);
+$shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+
+$body-font: 'Poppins', sans-serif;
+
+$text-xxl: 6rem;
+$text-xl: 3.6rem;
+$text-lg: 3.2rem;
+$text-md: 2.4rem;
+$text-nm: 2rem;
+$text-sm: 1.8rem;
+$text-xs: 1.6rem;
+$text-xxs: 1.4rem;
+
+$font-rg: 400;
+$font-md: 500;
+$font-sb: 600;
+$font-b: 700;
+$font-black: 900;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: $header-height 0 0 0;
+  font-family: $body-font;
+  font-size: $text-md;
+  background: $light-color;
+  color: $dark-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  border: none;
+  outline: none;
+  font-family: $body-font;
+}
+
+button {
+  cursor: pointer;
+  font-family: $body-font;
+  font-size: $text-md;
+}
+
+.container {
+  margin: 2rem 6rem;
+  position: relative;
+}
+
+.description {
+  font-size: $text-sm;
+  font-weight: $font-rg;
+  text-align: justify;
+}
+
+%section-page {
+  position: relative;
+  width: 100%;
+  display: grid;
+  gap: 10rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+%introduce-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@import 'header';
+@import 'footer';
+@import 'button';
+@import 'table';
+@import 'pages/pages';
+@import 'utils/utils';

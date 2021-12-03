@@ -1,0 +1,52 @@
+.contact-form {
+  display: flex;
+  gap: 2rem;
+  padding: 0 5rem;
+
+  .detail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+
+    .text-icon {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+
+      img {
+        height: 2.5rem;
+      }
+    }
+
+    .address {
+      margin-top: 2rem;
+    }
+  }
+
+  .form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .input {
+    display: flex;
+    gap: 1rem;
+  }
+
+  input,
+  textarea {
+    border: 0.1rem solid $soft-gray-color;
+    font-size: $text-sm;
+    padding: 1.5rem;
+    width: 100%;
+    box-shadow: $shadow;
+
+    &:focus {
+      border: 0.1rem solid $primary-color;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.table {
+  font-size: $text-xs;
+  margin: 2rem 0;
+  width: 100%;
+
+  thead {
+    background-color: $primary-color;
+    color: $white-color;
+  }
+
+  td {
+    padding: 1rem 2rem;
+  }
+}

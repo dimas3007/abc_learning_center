@@ -1,0 +1,89 @@
+.course {
+  position: relative;
+  width: 100%;
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  .course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .course-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .course-btn {
+      align-self: flex-end;
+    }
+  }
+
+  .course-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    .course-item {
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      background-color: $white-color;
+      box-shadow: $shadow;
+      border-radius: 10px;
+
+      .img {
+        width: 32rem;
+        height: 18rem;
+        background-color: $gray-color;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      .text {
+        h4 {
+          font-weight: $font-sb;
+          font-size: $text-md;
+          cursor: pointer;
+
+          &:hover {
+            color: $primary-dark-color;
+          }
+        }
+
+        h3 {
+          font-weight: $font-rg;
+          font-size: $text-sm;
+          color: $gray-color;
+        }
+      }
+    }
+  }
+}
+
+.rate {
+  display: flex;
+  justify-content: space-between;
+
+  .star {
+    display: flex;
+    align-items: center;
+    font-size: $text-xs;
+
+    img {
+      height: 2rem;
+    }
+  }
+
+  .difficult {
+    font-size: $text-xxs;
+    color: $primary-color;
+
+    img {
+      height: 3rem;
+    }
+  }
+}

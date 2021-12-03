@@ -1,0 +1,52 @@
+.testimonial {
+  margin-top: 20rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  .testimonial-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .testimonial-list {
+    display: flex;
+    gap: 8rem;
+    justify-content: center;
+
+    .testimonial-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      .img {
+        width: 8rem;
+        height: 8rem;
+        background-color: $gray-color;
+        border-radius: 50%;
+      }
+
+      .text {
+        text-align: center;
+
+        p {
+          font-size: $text-xs;
+          color: $primary-color;
+        }
+      }
+
+      .description {
+        text-align: center;
+      }
+
+      .star {
+        img {
+          height: 2rem;
+        }
+      }
+    }
+  }
+}

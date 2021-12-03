@@ -1,0 +1,49 @@
+@import 'home/home';
+@import 'about/about';
+@import 'contact/contact';
+@import 'course/course';
+@import 'privacypolicy/privacypolicy';
+@import 'auth/auth';
+
+@import 'home/introduce';
+@import 'home/whyus';
+@import 'home/course';
+@import 'home/testimonial';
+@import 'home/invitation';
+
+.page-introduce {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+
+  h6 {
+    font-weight: $font-sb;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    background-color: $primary-dark-color;
+    width: max-content;
+    color: $light-color;
+  }
+
+  h1 {
+    font-size: $text-xxl;
+    font-weight: $font-sb;
+  }
+
+  .description,
+  .rate {
+    width: 50%;
+  }
+
+  .rate {
+    .difficult {
+      display: flex;
+      align-items: flex-end;
+      gap: 2.5rem;
+    }
+  }
+}

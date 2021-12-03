@@ -1,0 +1,41 @@
+.header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  font-weight: $font-md;
+}
+
+.header .logo {
+  img {
+    cursor: pointer;
+    height: 6rem;
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(0.5rem);
+    }
+  }
+}
+
+.header .nav {
+  font-size: $text-xs;
+  display: flex;
+  gap: 3rem;
+}
+
+.header .nav .nav-item {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header .nav .nav-item:hover {
+  color: $primary-color;
+  transform: translateY(0.2rem);
+}
+
+.header .nav .nav-item.active {
+  color: $primary-color;
+}
