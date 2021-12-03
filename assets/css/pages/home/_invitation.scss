@@ -23,5 +23,36 @@
     height: 12rem;
     background-color: $gray-color;
     border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .img-shape {
+    img:nth-child(1) {
+      @include shape(26rem, 8rem, unset, unset, -17rem, 90deg);
+    }
+
+    img:nth-child(2) {
+      @include shape(6rem, unset, unset, -19rem, 5rem, 90deg);
+    }
+
+    img:nth-child(3) {
+      @include shape(4rem, unset, 25rem, 6rem);
+    }
+
+    img:nth-child(4) {
+      @include shape(5rem, 10rem, unset, unset, 50rem);
+    }
+
+    img:nth-child(5) {
+      @include shape(6rem, 15rem, 5rem);
+    }
+
+    img:nth-child(6) {
+      @include shape(4rem, 28rem, 80rem, unset, unset, 90deg);
+    }
   }
 }

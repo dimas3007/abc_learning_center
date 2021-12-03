@@ -38,9 +38,18 @@
       .img {
         width: 32rem;
         height: 18rem;
-        background-color: $gray-color;
+        background-color: $primary-dark-color;
         cursor: pointer;
         border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        img {
+          height: 70%;
+          filter: drop-shadow(5px 5px 5px #000);
+        }
       }
 
       .text {
@@ -60,6 +69,16 @@
           color: $gray-color;
         }
       }
+    }
+  }
+
+  .img-shape {
+    img:nth-child(1) {
+      @include shape(6rem, 0rem, unset, unset, 12rem, 90deg);
+    }
+
+    img:nth-child(2) {
+      @include shape(4rem, -5rem, 46rem, unset, unset, 100deg);
     }
   }
 }

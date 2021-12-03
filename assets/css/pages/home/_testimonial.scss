@@ -22,11 +22,17 @@
       flex-direction: column;
       align-items: center;
       gap: 1rem;
+
       .img {
         width: 8rem;
         height: 8rem;
         background-color: $gray-color;
         border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+        }
       }
 
       .text {

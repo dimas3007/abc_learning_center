@@ -33,6 +33,7 @@
       height: 30rem;
       overflow: hidden;
       background-size: 25rem;
+      box-shadow: $shadow;
     }
 
     .img-items:nth-child(1) {
@@ -54,6 +55,32 @@
       background-image: url('../../../assets/img/people/people (8).jpg');
       background-position-x: 17rem;
       background-position-y: center;
+    }
+  }
+
+  .img-shape {
+    img:nth-child(1) {
+      @include shape(26rem, 8rem, unset, unset, -17rem, 90deg);
+    }
+
+    img:nth-child(2) {
+      @include shape(6rem, unset, unset, 6rem, 14rem, 90deg);
+    }
+
+    img:nth-child(3) {
+      @include shape(4rem, unset, 14rem, 10rem);
+    }
+
+    img:nth-child(4) {
+      @include shape(5rem, 10rem, unset, unset, 50rem);
+    }
+
+    img:nth-child(5) {
+      @include shape(6rem, 15rem, 5rem);
+    }
+
+    img:nth-child(6) {
+      @include shape(4rem, 28rem, 80rem, unset, unset, 90deg);
     }
   }
 }
