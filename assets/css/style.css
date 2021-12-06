@@ -433,7 +433,19 @@ footer .contact h5 {
 .partner .partner-img .partner-list .img-items {
   width: 100%;
   height: 10rem;
-  background-color: #a0a0a2;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
 }
 
 .team {
@@ -461,6 +473,14 @@ footer .contact h5 {
   width: 100%;
   height: 25rem;
   background-color: #a0a0a2;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 1.5rem;
+}
+
+.team .team-list .team-item .img img {
+  height: 35rem;
 }
 
 .team .team-list .team-item .text {
@@ -1201,6 +1221,10 @@ footer .contact h5 {
 .invitation .invitation-item .description {
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.invitation .invitation-item h4 {
+  font-weight: 600;
 }
 
 .invitation .img {
