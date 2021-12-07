@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | ABC Learning Center</title>
+    <title>Schedule | ABC Learning Center</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
   <body>
@@ -13,12 +13,11 @@
 
       <section class="page-introduce">
         <h6>Course Detail</h6>
-        <h1>Programming in Java</h1>
-        <p class="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-          inventore nihil facilnt Lorem ipsum dolor sit amet. Lorem ipsum, dolor
-          sit amet consectetur adipisicing elit. Inventore, ipsam! ducimus
-          ipsum?
+        <h1 title="">Programming in Java</h1>
+        <p class="description" id="description">
+          Java Programming Course for Beginners to Java Object Oriented
+          Programming, Leran java programming writing 200+ java programs, puzzle
+          & exercisse. recommend for absolute beginners to Java and Programming!
         </p>
         <div class="rate">
           <div class="star">
@@ -27,88 +26,27 @@
             <img src="../assets/img/icons/star.svg" alt="" />
             <img src="../assets/img/icons/star.svg" alt="" />
             <img src="../assets/img/icons/star.svg" alt="" />
-            <p>(500)</p>
+            <p id="star">(500)</p>
           </div>
           <div class="difficult">
-            <p class="description">Begginer</p>
+            <p class="description" id="level">Begginer</p>
             <img src="../assets/img/icons/level1.svg" alt="" />
           </div>
         </div>
       </section>
 
       <section class="schedule-detail-page">
-        <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+        <h4>Module & Schedule</h4>
         <table class="table">
           <thead>
             <tr>
               <td>No</td>
-              <td>Nama</td>
+              <td>Module</td>
               <td>Time</td>
               <td>Mentor</td>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Belajar Membaca</td>
-              <td>1:00 - 2:00</td>
-              <td>Dimas Setiaji</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Belajar Membaca</td>
-              <td>1:00 - 2:00</td>
-              <td>Dimas Setiaji</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Belajar Membaca</td>
-              <td>1:00 - 2:00</td>
-              <td>Dimas Setiaji</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Belajar Membaca</td>
-              <td>1:00 - 2:00</td>
-              <td>Dimas Setiaji</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Belajar Membaca</td>
-              <td>1:00 - 2:00</td>
-              <td>Dimas Setiaji</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Belajar Membaca</td>
-              <td>1:00 - 2:00</td>
-              <td>Dimas Setiaji</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Belajar Membaca</td>
-              <td>1:00 - 2:00</td>
-              <td>Dimas Setiaji</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Belajar Membaca</td>
-              <td>1:00 - 2:00</td>
-              <td>Dimas Setiaji</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Belajar Membaca</td>
-              <td>1:00 - 2:00</td>
-              <td>Dimas Setiaji</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Belajar Membaca</td>
-              <td>1:00 - 2:00</td>
-              <td>Dimas Setiaji</td>
-            </tr>
-          </tbody>
+          <tbody id="schedule"></tbody>
         </table>
       </section>
 
@@ -116,5 +54,31 @@
     </main>
 
     <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/courseData.js"></script>
+    <script>
+      const title = document.querySelectorAll('[title]');
+      const description = document.getElementById('description');
+      const schedule = document.getElementById('schedule');
+
+      const id = +localStorage.getItem('courseId') || 1;
+
+      const newCourse = dataCourse.find(item => item.id === id);
+
+      title[0].innerHTML = newCourse.title;
+      description.innerHTML = newCourse.description;
+
+      schedule.innerHTML = newCourse.schedule
+        .map(
+          (item, index) => `
+          <tr>
+            <td>${index + 1}</td>  
+            <td>${item.module}</td>
+            <td>${item.time}</td>
+            <td>${item.mentor}</td>
+          </tr>
+        `
+        )
+        .join('');
+    </script>
   </body>
 </html>

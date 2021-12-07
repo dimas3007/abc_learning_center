@@ -10,12 +10,28 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    .logo {
+      img {
+        height: 5rem;
+      }
+    }
   }
 
   .sitemap {
     grid-column: 6/10;
     display: flex;
     gap: 5rem;
+
+    p {
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    p:hover {
+      color: $primary-color;
+      transform: translateY(0.3rem);
+    }
 
     .sitemap-item {
       display: flex;

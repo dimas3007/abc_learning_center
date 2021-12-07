@@ -17,22 +17,6 @@ class HTMLInclude extends HTMLElement {
 
     const content = await response.text();
     this.innerHTML = content;
-
-    if (content) {
-      const logo = document.getElementById('brand-logo');
-
-      const currentLocation = window.location.pathname;
-      const currentHtmlFile = () => {
-        const arr = currentLocation.split('/');
-        return arr[arr.length - 2];
-      };
-
-      if (currentHtmlFile() === 'pages') {
-        logo.src = '../assets/img/logo.png';
-      } else {
-        logo.src = '../../assets/img/logo.png';
-      }
-    }
   }
 }
 

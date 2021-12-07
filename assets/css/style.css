@@ -16,6 +16,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 2.4rem;
   background: #f5f5ff;
+  background-image: url("../img/bg.png");
   color: #202020;
   overflow-x: hidden;
 }
@@ -27,10 +28,6 @@ h4,
 h5,
 h6 {
   font-weight: inherit;
-}
-
-ul {
-  list-style: none;
 }
 
 a {
@@ -99,6 +96,18 @@ button {
   color: #ffaf00;
 }
 
+.sitemap-page {
+  height: 43vh;
+  width: 100%;
+  padding: 0 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .header {
   position: absolute;
   width: 100%;
@@ -113,6 +122,10 @@ button {
           align-items: center;
   z-index: 9999;
   font-weight: 500;
+}
+
+.header ul {
+  list-style: none;
 }
 
 .header .logo img {
@@ -175,6 +188,10 @@ footer .footer {
   gap: 2rem;
 }
 
+footer .footer .logo img {
+  height: 5rem;
+}
+
 footer .sitemap {
   -ms-grid-column: 6;
   -ms-grid-column-span: 4;
@@ -183,6 +200,18 @@ footer .sitemap {
   display: -ms-flexbox;
   display: flex;
   gap: 5rem;
+}
+
+footer .sitemap p {
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+footer .sitemap p:hover {
+  color: #4958e8;
+  -webkit-transform: translateY(0.3rem);
+          transform: translateY(0.3rem);
 }
 
 footer .sitemap .sitemap-item {
@@ -324,6 +353,8 @@ footer .contact h5 {
   background-image: url("../../../assets/img/people/people (13).jpg");
   background-position-x: 13rem;
   background-position-y: center;
+  -webkit-animation: floating-1 5s ease-in-out infinite;
+          animation: floating-1 5s ease-in-out infinite;
 }
 
 .hero .hero-img .img-items:nth-child(2) {
@@ -332,6 +363,8 @@ footer .contact h5 {
   background-image: url("../../../assets/img/people/people (7).jpg");
   background-position-x: 19rem;
   background-position-y: center;
+  -webkit-animation: floating-2 6s ease-in-out infinite;
+          animation: floating-2 6s ease-in-out infinite;
 }
 
 .hero .hero-img .img-items:nth-child(3) {
@@ -340,6 +373,8 @@ footer .contact h5 {
   background-image: url("../../../assets/img/people/people (8).jpg");
   background-position-x: 17rem;
   background-position-y: center;
+  -webkit-animation: floating-3 4s ease-in-out infinite;
+          animation: floating-3 4s ease-in-out infinite;
 }
 
 .hero .img-shape img:nth-child(1) {
@@ -400,6 +435,96 @@ footer .contact h5 {
   right: unset;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+@-webkit-keyframes floating-1 {
+  0% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  50% {
+    -webkit-transform: translateY(12%);
+            transform: translateY(12%);
+  }
+  100% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+}
+
+@keyframes floating-1 {
+  0% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  50% {
+    -webkit-transform: translateY(12%);
+            transform: translateY(12%);
+  }
+  100% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+}
+
+@-webkit-keyframes floating-2 {
+  0% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  50% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  100% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+}
+
+@keyframes floating-2 {
+  0% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  50% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  100% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+}
+
+@-webkit-keyframes floating-3 {
+  0% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  50% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+  }
+  100% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+}
+
+@keyframes floating-3 {
+  0% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  50% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+  }
+  100% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
 }
 
 .partner .introduce-text {
@@ -591,6 +716,13 @@ footer .contact h5 {
   width: 100%;
   height: 50rem;
   border-radius: 3rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+}
+
+.course-detail-page .detail .img img {
+  width: 100%;
 }
 
 .course-detail-page .detail .text {
@@ -603,6 +735,10 @@ footer .contact h5 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.5rem;
+}
+
+.course-detail-page .detail .text ul {
+  padding-left: 4rem;
 }
 
 .course-detail-page .detail .schedule {
@@ -629,6 +765,15 @@ footer .contact h5 {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+}
+
+.course-detail-page .registration h3 {
+  color: #ffaf00;
+  font-weight: 600;
+}
+
+.course-detail-page .registration ul {
+  padding-left: 4rem;
 }
 
 .course.page {
@@ -662,6 +807,10 @@ footer .contact h5 {
   font-weight: 600;
 }
 
+.privacy-policy ul {
+  padding: 0 5rem;
+}
+
 .auth {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -681,11 +830,27 @@ footer .contact h5 {
 }
 
 .auth .text {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .auth .text h1 {
   font-weight: 600;
+}
+
+.auth .text p {
+  text-align: center;
+  width: 70%;
+  margin-top: 1rem;
+  color: #a0a0a2;
 }
 
 .auth .form {
@@ -1381,6 +1546,10 @@ footer .contact h5 {
 
 .text-light {
   color: #f5f5ff;
+}
+
+.text-danger {
+  color: #f02e2e !important;
 }
 
 .text-rg {

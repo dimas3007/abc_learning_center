@@ -13,6 +13,12 @@
       width: 100%;
       height: 50rem;
       border-radius: 3rem;
+      overflow: hidden;
+      box-shadow: $shadow;
+
+      img {
+        width: 100%;
+      }
     }
 
     .text {
@@ -20,6 +26,10 @@
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+
+      ul {
+        padding-left: 4rem;
+      }
     }
 
     .schedule {
@@ -37,6 +47,15 @@
     padding: 4rem;
     border-radius: 15px;
     height: max-content;
+
+    h3 {
+      color: $gold-color;
+      font-weight: $font-sb;
+    }
+
+    ul {
+      padding-left: 4rem;
+    }
 
     // .btn {
     //   width: 100%;

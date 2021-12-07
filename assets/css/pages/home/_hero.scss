@@ -41,6 +41,7 @@
       background-image: url('../../../assets/img/people/people (13).jpg');
       background-position-x: 13rem;
       background-position-y: center;
+      animation: floating-1 5s ease-in-out infinite;
     }
 
     .img-items:nth-child(2) {
@@ -48,6 +49,7 @@
       background-image: url('../../../assets/img/people/people (7).jpg');
       background-position-x: 19rem;
       background-position-y: center;
+      animation: floating-2 6s ease-in-out infinite;
     }
 
     .img-items:nth-child(3) {
@@ -55,6 +57,7 @@
       background-image: url('../../../assets/img/people/people (8).jpg');
       background-position-x: 17rem;
       background-position-y: center;
+      animation: floating-3 4s ease-in-out infinite;
     }
   }
 
@@ -84,3 +87,7 @@
     }
   }
 }
+
+@include floating(floating-1, 5%, 12%);
+@include floating(floating-2, -10%, -20%);
+@include floating(floating-3, 10%, 20%);

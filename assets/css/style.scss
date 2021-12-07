@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 $header-height: 3.5rem;
 
-// $gray-color: rgb(71, 71, 71);
+$red-color: #f02e2e;
 $gray-color: #a0a0a2;
 $gold-color: #ffaf00;
 $soft-gray-color: #dbdbdb;
@@ -10,6 +10,7 @@ $primary-dark-color: #2734aa;
 $dark-color: rgb(32, 32, 32);
 $light-color: rgb(245, 245, 255);
 $white-color: rgb(255, 255, 255);
+
 $shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
 $shadow-hard: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 
@@ -46,6 +47,7 @@ body {
   font-family: $body-font;
   font-size: $text-md;
   background: $light-color;
+  background-image: url('../img/bg.png');
   color: $dark-color;
   overflow-x: hidden;
 }
@@ -57,10 +59,6 @@ h4,
 h5,
 h6 {
   font-weight: inherit;
-}
-
-ul {
-  list-style: none;
 }
 
 a {
@@ -123,6 +121,20 @@ button {
   transform: rotate($deg);
 }
 
+@mixin floating($name, $from, $to) {
+  @keyframes #{$name} {
+    0% {
+      transform: translateY($from);
+    }
+    50% {
+      transform: translateY($to);
+    }
+    100% {
+      transform: translateY($from);
+    }
+  }
+}
+
 .img-shape {
   position: absolute;
   width: 100%;
@@ -136,6 +148,14 @@ button {
 
 .text-highlight {
   color: $gold-color;
+}
+
+.sitemap-page {
+  height: 43vh;
+  width: 100%;
+  padding: 0 10rem;
+  display: flex;
+  align-items: center;
 }
 
 @import 'header';

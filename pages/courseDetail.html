@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | ABC Learning Center</title>
+    <title>Detail | ABC Learning Center</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
   <body>
@@ -13,8 +13,8 @@
 
       <section class="page-introduce">
         <h6>Course Detail</h6>
-        <h1>Programming in Java</h1>
-        <p class="description">
+        <h1 title="">Programming in Java</h1>
+        <p class="description" id="description">
           Java Programming Course for Beginners to Java Object Oriented
           Programming, Leran java programming writing 200+ java programs, puzzle
           & exercisse. recommend for absolute beginners to Java and Programming!
@@ -26,10 +26,10 @@
             <img src="../assets/img/icons/star.svg" alt="" />
             <img src="../assets/img/icons/star.svg" alt="" />
             <img src="../assets/img/icons/star.svg" alt="" />
-            <p>(500)</p>
+            <p id="star">(500)</p>
           </div>
           <div class="difficult">
-            <p class="description">Begginer</p>
+            <p class="description" id="level">Begginer</p>
             <img src="../assets/img/icons/level1.svg" alt="" />
           </div>
         </div>
@@ -37,52 +37,16 @@
 
       <section class="course-detail-page">
         <div class="detail">
-          <div class="img"></div>
+          <div class="img">
+            <img src="" alt="" id="image" />
+          </div>
           <div class="text">
-            <h4>COURSE OVERVIEW</h4>
-            <p class="description">
-              Java is one of the most popular programming languages. Java offers
-              both object-oriented and functional programming features.
-            </p>
-            <p class="description">
-              We take a hands-on approach using a combination of JShell and
-              Eclipse as an IDE to illustrate more than 200 Java Coding
-              Exercises, Puzzles, and Code Examples. This course assumes no
-              previous ( beginner ) programming or Java experience. If you’ve
-              never programmed a computer before, or if you already have
-              experience with another programming language and want to quickly
-              learn Java, this is a perfect course for you.
-            </p>
-            <p class="description">
-              In more than 250 Steps, we explore the most important Java
-              Programming Language Features
-            </p>
-            <p class="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae vel asperiores dicta amet voluptatibus ipsa, assumenda
-              alias aut illum pariatur corporis odit quia atque harum laudantium
-              quis unde sapiente vero rerum. Ipsam, possimus esse!
-            </p>
+            <h4>Course Overview</h4>
+            <div id="overview"></div>
           </div>
           <div class="text">
             <h4>This course is intended for</h4>
-            <ul>
-              <li>
-                You have ZERO programming experience and want to learn Java
-                Programming
-              </li>
-              <li>
-                You are a Beginner at Java Programming and want to Learn to
-                write Great Java Programs
-              </li>
-              <li>
-                You want to learn the Basics of Object Oriented Programming with
-                Java
-              </li>
-              <li>
-                You want to learn the Basics of Functional Programming with Java
-              </li>
-            </ul>
+            <ul class="text-sm" id="intended"></ul>
           </div>
           <div class="schedule">
             <h4>This is what you'll discover</h4>
@@ -95,7 +59,7 @@
                   <td>Mentor</td>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="schedule">
                 <tr>
                   <td>1</td>
                   <td>
@@ -123,19 +87,21 @@
               </tbody>
             </table>
             <div>
-              <button class="btn">Detail Schedule</button>
+              <a href="./scheduleDetail.html">
+                <button class="btn">Detail Schedule</button>
+              </a>
             </div>
           </div>
         </div>
         <div class="registration">
-          <h4>Programming in Java</h4>
-          <p class="description">IDR. 200.000.000</p>
-          <p class="description">Kursus ini mencakup:</p>
-          <ul>
-            <li>Video atas permintaan 31 jam</li>
-            <li>11 artikel</li>
-            <li>Akses penuh seumur hidup</li>
-            <li>Sertifikat penyelesaian</li>
+          <h4 title>Programming in Java</h4>
+          <h3 id="price">IDR 200.000</h3>
+          <p class="description">This course covers the following topics:</p>
+          <ul class="text-sm">
+            <li>31 Hours of video tutorials</li>
+            <li>11 Articles</li>
+            <li>Lifetime full access</li>
+            <li>Certificate of completion</li>
           </ul>
           <button class="btn">Join Course</button>
         </div>
@@ -145,8 +111,10 @@
         <div class="testimonial-text">
           <h4 class="introduce-sm-text">Success Stories</h4>
           <div class="introduce-title">
-            <h2>Online Learning Platform</h2>
-            <h2>With International Curriculum</h2>
+            <h2>
+              Discover <span class="text-highlight">Various</span> Experiences
+            </h2>
+            <h2>by Studying With Us</h2>
           </div>
         </div>
         <div class="testimonial-list">
@@ -156,11 +124,11 @@
             </div>
             <div class="text">
               <h4>Dimas Setiaji</h4>
-              <p class="description">Student at SB University</p>
+              <p class="description">Front-End Web Developer</p>
             </div>
             <p class="description">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-              omnis fuga optio aperiam earum dolores.
+              The mentor is cool, and the way he presents each piece of
+              information is clear and concise.
             </p>
             <div class="star">
               <img src="../assets/img/icons/star.svg" alt="" />
@@ -175,12 +143,12 @@
               <img src="../assets/img/avatar/avatar (2).jpg" alt="" />
             </div>
             <div class="text">
-              <h4>Dimas Setiaji</h4>
-              <p class="description">Student at SB University</p>
+              <h4>Sarah</h4>
+              <p class="description">Student at Lithan Academy</p>
             </div>
             <p class="description">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-              omnis fuga optio aperiam earum dolores.
+              The classes are quite beneficial, up-to-date, and most
+              importantly, reasonably priced.
             </p>
             <div class="star">
               <img src="../assets/img/icons/star.svg" alt="" />
@@ -195,12 +163,12 @@
               <img src="../assets/img/avatar/avatar (3).jpg" alt="" />
             </div>
             <div class="text">
-              <h4>Dimas Setiaji</h4>
-              <p class="description">Student at SB University</p>
+              <h4>Chris Joe</h4>
+              <p class="description">Student at Harvard University</p>
             </div>
             <p class="description">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-              omnis fuga optio aperiam earum dolores.
+              The mentor here is extremely helpful in helping students go from
+              beginner to master level.
             </p>
             <div class="star">
               <img src="../assets/img/icons/star.svg" alt="" />
@@ -217,5 +185,67 @@
     </main>
 
     <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/courseData.js"></script>
+    <script>
+      const title = document.querySelectorAll('[title]');
+      const description = document.getElementById('description');
+      const price = document.getElementById('price');
+      const star = document.getElementById('star');
+      const level = document.getElementById('level');
+      const overview = document.getElementById('overview');
+      const intended = document.getElementById('intended');
+      const schedule = document.getElementById('schedule');
+      const image = document.getElementById('image');
+
+      const id = +localStorage.getItem('courseId') || 1;
+      console.log(id);
+
+      if (id !== 999) {
+        const newCourse = dataCourse.find(item => item.id === id);
+
+        title[0].innerHTML = newCourse.title;
+        title[1].innerHTML = newCourse.title;
+        description.innerHTML = newCourse.description;
+        star.innerHTML = `(${newCourse.star})`;
+        level.innerHTML = newCourse.level;
+        price.innerHTML = newCourse.price;
+        image.src = newCourse.img;
+
+        overview.innerHTML = newCourse.courseOverview
+          .map(item => `<p class="description">${item}</p>`)
+          .join('<br />');
+
+        intended.innerHTML = newCourse.courseFor
+          .map(item => `<li>${item}</li>`)
+          .join('');
+
+        schedule.innerHTML = newCourse.schedule
+          .slice(0, 3)
+          .map(
+            (item, index) => `
+          <tr>
+            <td>${index + 1}</td>  
+            <td>${item.module}</td>
+            <td>${item.time}</td>
+            <td>${item.mentor}</td>
+          </tr>
+        `
+          )
+          .join('');
+      } else {
+        const detailPage =
+          document.getElementsByClassName('course-detail-page')[0];
+        const testimonial = document.getElementsByClassName('testimonial')[0];
+        const rate = document.getElementsByClassName('rate')[0];
+
+        detailPage.style.display = 'none';
+        testimonial.style.display = 'none';
+        rate.innerHTML = `<a href="./course.html"></button><button class="btn">See More Course</button></a>`;
+
+        title[0].innerHTML =
+          'This course is currently <span class="text-danger"> closed </span>';
+        description.innerHTML = `This course has been closed because to a quota being reached, but don't worry, it will reopen later. `;
+      }
+    </script>
   </body>
 </html>
