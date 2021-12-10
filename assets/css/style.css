@@ -70,7 +70,7 @@ button {
       grid-template-columns: repeat(12, 1fr);
 }
 
-.partner .introduce-text, .introduce .introduce-text {
+.partner .introduce-text, .team .introduce-text, .introduce .introduce-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,14 +141,18 @@ button {
 }
 
 .header .nav {
+  position: relative;
   font-size: 1.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 3rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .header .nav .nav-item {
+  position: relative;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -162,6 +166,43 @@ button {
 
 .header .nav .nav-item.active {
   color: #4958e8;
+}
+
+.ui-menu.ui-widget.ui-widget-content.ui-front {
+  position: absolute;
+  top: 3rem !important;
+  left: 0 !important;
+  background-color: #dbdbdb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.ui-menu.ui-widget.ui-widget-content.ui-front.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.ui-menu.ui-widget.ui-widget-content.ui-front.nav .nav-item {
+  color: #202020;
+}
+
+.ui-menu.ui-widget.ui-widget-content.ui-front.nav .nav-item:hover {
+  color: #4958e8;
+  -webkit-transform: translateY(0.2rem);
+          transform: translateY(0.2rem);
 }
 
 footer {
@@ -774,6 +815,39 @@ footer .contact h5 {
 
 .course-detail-page .registration ul {
   padding-left: 4rem;
+}
+
+.course-detail-page .tabs {
+  margin: 5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.course-detail-page .tabs .tab {
+  background-color: #dbdbdb;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  font-size: 1.8rem;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+}
+
+.course-detail-page .tabs .tab.active {
+  background-color: #4958e8;
+  color: white;
+}
+
+.course-detail-page .tab-content {
+  display: none;
+}
+
+.course-detail-page .tab-content.active {
+  display: block;
 }
 
 .course.page {

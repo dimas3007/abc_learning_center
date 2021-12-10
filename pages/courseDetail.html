@@ -5,7 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail | ABC Learning Center</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/img/favicon.png"
+      sizes="16x16"
+    />
     <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/jquery/jquery.min.js"></script>
+    <script src="../assets/js/jquery/jquery-ui.min.js"></script>
   </head>
   <body>
     <main class="container">
@@ -40,56 +48,48 @@
           <div class="img">
             <img src="" alt="" id="image" />
           </div>
-          <div class="text">
-            <h4>Course Overview</h4>
-            <div id="overview"></div>
+          <div class="tabs">
+            <a href="#" class="tab active" data-toggle-target=".tab-content-1"
+              >Course Overview</a
+            >
+            <a href="#" class="tab" data-toggle-target=".tab-content-2"
+              >This Course For</a
+            >
+            <a href="#" class="tab" data-toggle-target=".tab-content-3"
+              >Schedule</a
+            >
           </div>
-          <div class="text">
-            <h4>This course is intended for</h4>
-            <ul class="text-sm" id="intended"></ul>
+          <div class="tab-content tab-content-1 active">
+            <div class="text">
+              <h4>Course Overview</h4>
+              <div id="overview"></div>
+            </div>
           </div>
-          <div class="schedule">
-            <h4>This is what you'll discover</h4>
-            <table class="table">
-              <thead>
-                <tr>
-                  <td>No</td>
-                  <td>Module</td>
-                  <td>Time</td>
-                  <td>Mentor</td>
-                </tr>
-              </thead>
-              <tbody id="schedule">
-                <tr>
-                  <td>1</td>
-                  <td>
-                    Basics of Java Programming - Expressions, Variables, and
-                    Printing Output
-                  </td>
-                  <td>1:00 - 2:00</td>
-                  <td>Dimas Setiaji</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>
-                    Java Operators - Java Assignment Operator, Relational and
-                    Logical Operators, Short Circuit Operators
-                  </td>
-                  <td>1:00 - 2:00</td>
-                  <td>Dimas Setiaji</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Java Conditionals and If Statement</td>
-                  <td>1:00 - 2:00</td>
-                  <td>Dimas Setiaji</td>
-                </tr>
-              </tbody>
-            </table>
-            <div>
-              <a href="./scheduleDetail.html">
-                <button class="btn">Detail Schedule</button>
-              </a>
+          <div class="tab-content tab-content-2">
+            <div class="text">
+              <h4>This course is intended for</h4>
+              <ul class="text-sm" id="intended"></ul>
+            </div>
+          </div>
+          <div class="tab-content tab-content-3">
+            <div class="schedule">
+              <h4>This is what you'll discover</h4>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <td>No</td>
+                    <td>Module</td>
+                    <td>Time</td>
+                    <td>Mentor</td>
+                  </tr>
+                </thead>
+                <tbody id="schedule"></tbody>
+              </table>
+              <div>
+                <a href="./scheduleDetail.html">
+                  <button class="btn">Detail Schedule</button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -246,6 +246,19 @@
           'This course is currently <span class="text-danger"> closed </span>';
         description.innerHTML = `This course has been closed because to a quota being reached, but don't worry, it will reopen later. `;
       }
+
+      $(document).ready(function () {
+        $('.tab').on('click', function (evt) {
+          evt.preventDefault();
+          $('.tab').removeClass('active');
+          $(this).toggleClass('active');
+          var sel = this.getAttribute('data-toggle-target');
+          $('.tab-content')
+            .removeClass('active')
+            .filter(sel)
+            .addClass('active');
+        });
+      });
     </script>
   </body>
 </html>

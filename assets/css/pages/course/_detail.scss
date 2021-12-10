@@ -61,4 +61,31 @@
     //   width: 100%;
     // }
   }
+
+  .tabs {
+    margin: 5rem 0;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+
+    .tab {
+      background-color: $soft-gray-color;
+      padding: 1rem 2rem;
+      border-radius: 5rem;
+      font-size: $text-sm;
+      box-shadow: $shadow;
+
+      &.active {
+        background-color: $primary-color;
+        color: $white-color;
+      }
+    }
+  }
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
 }

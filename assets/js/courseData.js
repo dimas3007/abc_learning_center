@@ -23,149 +23,149 @@ const dataCourse = [
       {
         module:
           'Basics of Java Programming - Expressions, Variables, and Printing Output ',
-        time: '1:00 - 2:00',
+        time: '1 December, 08:00 - 09:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'Java Operators - Java Assignment Operator, Relational and Logical Operators, Short Circuit Operators',
-        time: '1:00 - 2:00',
+        time: '1 December 09:00 - 11:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module: 'Java Conditionals and If Statement',
-        time: '1:00 - 2:00',
+        time: '1 December 11:00 - 13:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module: 'Methods - Parameters, Arguments, and Return Values',
-        time: '1:00 - 2:00',
+        time: '1 December 14:00 - 17:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'Object-Oriented Programming - Class, Object, State, and Behavior',
-        time: '1:00 - 2:00',
+        time: '2 December 08:00 - 09:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'Basics of OOPS - Encapsulation, Abstraction, Inheritance, and Polymorphism',
-        time: '1:00 - 2:00',
+        time: '2 December 09:00 - 11:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module: 'Basics about Java Data Types - Casting, Operators, and More',
-        time: '1:00 - 2:00',
+        time: '2 December 11:00 - 12:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'Java Built-in Classes - BigDecimal, String, Java Wrapper Classes',
-        time: '1:00 - 2:00',
+        time: '2 December 13:00 - 17:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'Conditionals with Java - If Else Statement, Nested If Else, Java Switch Statement, Java Ternary Operator',
-        time: '1:00 - 2:00',
+        time: '3 December 08:00 - 12:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'Loops - For Loop, While Loop in Java, Do While Loop, Break and Continue',
-        time: '1:00 - 2:00',
+        time: '3 December 14:00 - 17:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module: 'Immutability of Java Wrapper Classes, String and BigDecimal',
-        time: '1:00 - 2:00',
+        time: '4 December 08:00 - 09:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'Java Dates - Introduction to LocalDate, LocalTime and LocalDateTime',
-        time: '1:00 - 2:00',
+        time: '4 December 09:00 - 12:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'Java Array and ArrayList - Java String Arrays, Arrays of Objects, Primitive Data Types, toString and Exceptions',
-        time: '1:00 - 2:00',
+        time: '4 December 13:00 - 17:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module: 'Introduction to Variable Arguments',
-        time: '1:00 - 2:00',
+        time: '5 December 08:00 - 09:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'Basics of Designing a Class - Class, Object, State and Behavior. Deciding State and Constructors.',
-        time: '1:00 - 2:00',
+        time: '5 December 09:00 - 12:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module: 'Understanding Object Composition and Inheritance',
-        time: '1:00 - 2:00',
+        time: '5 December 13:00 - 17:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'Java Abstract Class and Interfaces. Introduction to Polymorphism.',
-        time: '1:00 - 2:00',
+        time: '6 December 08:00 - 09:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'Java Collections - List Interface(ArrayList, LinkedList and Vector), Set Interface (HashSet, LinkedHashSet and TreeSet), Queue Interface (PriorityQueue) and Map Interface (HashMap, HashTable, LinkedHashMap and TreeMap() - Compare, Contrast and Choose',
-        time: '1:00 - 2:00',
+        time: '6 December 09:00 - 12:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'Generics - Why do we need Generics? Restrictions with extends and Generic Methods, WildCards - Upper Bound and Lower Bound.',
-        time: '1:00 - 2:00',
+        time: '6 December 13:00 - 17:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'Functional Programming - Lambda Expression, Stream and Operations on a Stream (Intermediate Operations - Sort, Distinct, Filter, Map and Terminal Operations - max, min, collect to List), Functional Interfaces - Predicate Interface, Consumer Interface, Function Interface for Mapping, Method References - static and instance methods',
-        time: '1:00 - 2:00',
+        time: '7 December 08:00 - 09:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module: 'Introduction to Threads and MultiThreading - Need for Threads',
-        time: '1:00 - 2:00',
+        time: '7 December 09:00 - 12:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'Implementing Threads - Extending Thread Class and Implementing Runnable Interface',
-        time: '1:00 - 2:00',
+        time: '7 December 13:00 - 15:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module: 'States of a Thread and Communication between Threads',
-        time: '1:00 - 2:00',
+        time: '7 December 15:00 - 17:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'Introduction to Executor Service - Customizing the number of Active Threads. Returning a Future, invokeAll, and invokeAny',
-        time: '1:00 - 2:00',
+        time: '8 December 08:00 - 09:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'Introduction to Exception Handling - Your Thought Process during Exception Handling. try, catch, and finally. Exception Hierarchy - Checked Exceptions vs Unchecked Exceptions. Throwing an Exception. Creating and Throwing a Custom Exception - CurrenciesDoNotMatchException. Try with Resources - New Feature in Java 7.',
-        time: '1:00 - 2:00',
+        time: '8 December 09:00 - 12:00',
         mentor: 'Dimas Setiaji',
       },
       {
         module:
           'List files and folders in Directory with Files list method, File walk method and find methods. Read and write from a File.',
-        time: '1:00 - 2:00',
+        time: '8 December 13:00 - 17:00',
         mentor: 'Dimas Setiaji',
       },
     ],
@@ -191,48 +191,48 @@ const dataCourse = [
     schedule: [
       {
         module: 'Introduce HTML Tag',
-        time: '1:00 - 2:00',
-        mentor: 'Dimas Setiaji',
+        time: '1 December 08:00 - 09:00',
+        mentor: 'Mark Zuckerberg',
       },
       {
         module: 'Introduce Style in HTML5',
-        time: '1:00 - 2:00',
-        mentor: 'Dimas Setiaji',
+        time: '1 December 09:00 - 12:00',
+        mentor: 'Mark Zuckerberg',
       },
       {
         module: 'Transition, Animation, Transformation',
-        time: '1:00 - 2:00',
-        mentor: 'Dimas Setiaji',
+        time: '1 December 13:00 - 17:00',
+        mentor: 'Mark Zuckerberg',
       },
       {
         module: 'Data Tables in HTML 5',
-        time: '1:00 - 2:00',
-        mentor: 'Dimas Setiaji',
+        time: '2 December 08:00 - 09:00',
+        mentor: 'Mark Zuckerberg',
       },
       {
         module: 'Introduce Javascript',
-        time: '1:00 - 2:00',
-        mentor: 'Dimas Setiaji',
+        time: '2 December 09:00 - 12:00',
+        mentor: 'Mark Zuckerberg',
       },
       {
         module: 'Dynamic Web',
-        time: '1:00 - 2:00',
-        mentor: 'Dimas Setiaji',
+        time: '2 December 13:00 - 17:00',
+        mentor: 'Mark Zuckerberg',
       },
       {
         module: 'Canvas in HTML5',
-        time: '1:00 - 2:00',
-        mentor: 'Dimas Setiaji',
+        time: '3 December 08:00 - 09:00',
+        mentor: 'Mark Zuckerberg',
       },
       {
         module: 'JQUERY in HTML5',
-        time: '1:00 - 2:00',
-        mentor: 'Dimas Setiaji',
+        time: '3 December 09:00 - 12:00',
+        mentor: 'Mark Zuckerberg',
       },
       {
         module: 'Whats Next',
-        time: '1:00 - 2:00',
-        mentor: 'Dimas Setiaji',
+        time: '3 December 13:00 - 17:00',
+        mentor: 'Mark Zuckerberg',
       },
     ],
   },

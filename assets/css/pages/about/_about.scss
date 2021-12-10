@@ -34,6 +34,10 @@
 .team {
   margin-top: 20rem;
 
+  .introduce-text {
+    @extend %introduce-text;
+  }
+
   .team-list {
     padding: 8rem;
     display: flex;

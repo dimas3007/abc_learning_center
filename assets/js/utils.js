@@ -17,6 +17,10 @@ class HTMLInclude extends HTMLElement {
 
     const content = await response.text();
     this.innerHTML = content;
+
+    if (content) {
+      $('#navbar').menu();
+    }
   }
 }
 
