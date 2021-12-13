@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | ABC Learning Center</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/img/favicon.png"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/jquery/jquery.min.js"></script>
+    <script src="../assets/js/jquery/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <html-include src="../components/header.html"></html-include>
+
+      <section class="page-introduce">
+        <h6>Admin</h6>
+        <h1>Admin Panel</h1>
+      </section>
+
+      <section class="course-registration">
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <td>No</td>
+                <td>Username</td>
+                <td>Course</td>
+                <td>Name</td>
+                <td>Gender</td>
+                <td>Email</td>
+                <td>Phone</td>
+                <td>Country</td>
+                <td>Language</td>
+                <td>Address</td>
+                <td>Status</td>
+                <td>Option</td>
+              </tr>
+            </thead>
+            <tbody id="table-registration-course"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="modals hide">
+        <div class="modals-body">
+          <p class="description">
+            Are you certain you want to accept this offer?
+          </p>
+          <div class="modals-footer">
+            <button class="btn" modals-close>Back</button>
+            <button class="btn" modal-confirm>Accept</button>
+          </div>
+        </div>
+      </div>
+
+      <html-include src="../components/footer.html"></html-include>
+    </main>
+
+    <script src="../assets/js/utils.js"></script>
+    <script>
+      $(document).ready(function () {
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user.role !== 'admin') {
+          window.location.href = '../index.html';
+        }
+      });
+
+      const dbRegistrationCourse = JSON.parse(
+        localStorage.getItem('registration_course')
+      );
+
+      const table = $('#table-registration-course');
+
+      table.html(
+        dbRegistrationCourse.map(
+          (item, index) => `
+        <tr>
+          <td>${index + 1}</td>  
+          <td>${item.username}</td>  
+          <td>${item.course}</td>  
+          <td>${item.name}</td>  
+          <td>${item.gender}</td>  
+          <td>${item.email}</td>  
+          <td>${item.phone}</td>  
+          <td>${item.country}</td>  
+          <td>${item.language}</td>  
+          <td>${item.address}</td>  
+          <td><span class="badge badge-pending">${item.status}</span></td>  
+          <td>
+            <button class="btn" confirm="${item.id}">Accept</button>  
+            <button class="btn" confirm="${item.id}">Decline</button>  
+          </td>  
+        </tr>
+      `
+        )
+      );
+
+      let confirm = '';
+      let id = '';
+      $('[confirm]').click(function () {
+        id = $(this).attr('confirm');
+        confirm = $(this).text();
+
+        $('.modals').removeClass('hide');
+        $('.modals').addClass('show');
+        $('.modals').css('visibility', 'visible');
+      });
+
+      $('[modals-close]').click(function () {
+        $('.modals').removeClass('show');
+        $('.modals').addClass('hide');
+      });
+
+      $('[modal-confirm]').click(function () {
+        if (confirm === 'Accept') {
+          const currentCourse = dbRegistrationCourse.findIndex(item => {
+            return +item.id === +id;
+          });
+          dbRegistrationCourse[currentCourse].status = 'success';
+          localStorage.setItem(
+            'registration_course',
+            JSON.stringify(dbRegistrationCourse)
+          );
+
+          window.location.reload();
+        } else {
+          const removeCourse = dbRegistrationCourse.filter(item => {
+            return +item.id !== +id;
+          });
+
+          localStorage.setItem(
+            'registration_course',
+            JSON.stringify(removeCourse)
+          );
+
+          window.location.reload();
+        }
+      });
+    </script>
+  </body>
+</html>

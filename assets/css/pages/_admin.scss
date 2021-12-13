@@ -1,0 +1,105 @@
+.course-registration {
+  .table-wrap {
+    overflow-x: scroll;
+
+    table {
+      width: 150%;
+    }
+  }
+}
+
+.badge {
+  padding: 0.5rem 1rem;
+  color: $light-color;
+  border-radius: 5rem;
+  &-success {
+    background-color: $primary-color;
+  }
+
+  &-decline {
+    background-color: $red-color;
+  }
+
+  &-pending {
+    background-color: $gold-color;
+  }
+}
+
+.toast {
+  background-color: $red-color;
+  position: fixed;
+  z-index: 99999;
+  bottom: 5rem;
+  right: 2rem;
+  display: flex;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: $shadow;
+  color: $white-color;
+
+  &-success {
+    background-color: $primary-color;
+  }
+
+  &.show {
+    animation: modals 1s ease-in-out;
+  }
+
+  &.hide {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+    transition: 1s ease-in-out;
+  }
+}
+
+.modals {
+  width: 100vw;
+  height: 100vh;
+  background-color: $soft-color;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+
+  &.show {
+    animation: modals 1s ease-in-out;
+  }
+
+  &.hide {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+    transition: 1s ease-in-out;
+  }
+
+  .modals-body {
+    background-color: $white-color;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: $shadow;
+    width: max-content;
+
+    .modals-footer {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+@keyframes modals {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}

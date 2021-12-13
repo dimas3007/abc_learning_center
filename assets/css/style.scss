@@ -5,6 +5,7 @@ $red-color: #f02e2e;
 $gray-color: #a0a0a2;
 $gold-color: #ffaf00;
 $soft-gray-color: #dbdbdb;
+$soft-color: #dbdbdb50;
 $primary-color: rgb(73, 88, 232);
 $primary-dark-color: #2734aa;
 $dark-color: rgb(32, 32, 32);
@@ -163,4 +164,5 @@ button {
 @import 'button';
 @import 'table';
 @import 'pages/pages';
+@import 'pages/admin';
 @import 'utils/utils';

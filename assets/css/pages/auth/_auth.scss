@@ -29,15 +29,23 @@
     gap: 2rem;
   }
 
-  input {
+  input,
+  select,
+  textarea {
     border: 0.1rem solid $soft-gray-color;
     font-size: $text-xs;
     padding: 1.5rem 2.5rem;
     width: 100%;
     box-shadow: $shadow;
+    background-color: $white-color;
 
     &:focus {
       border: 0.1rem solid $primary-color;
+    }
+
+    &:disabled {
+      background-color: $soft-gray-color;
+      cursor: not-allowed;
     }
   }
 }
